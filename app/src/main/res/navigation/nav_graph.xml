@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@+id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="kr.co.widgetsample.MainFragment"
+        android:label="main">
+
+        <action
+            android:id="@+id/moveAction"
+            app:destination="@id/widgetFragment"
+            app:popUpToInclusive="true">
+
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/widgetFragment"
+        android:name="kr.co.widgetsample.WidgetFragment"
+        android:label="widget">
+
+        <action
+            android:id="@+id/backAction"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true">
+
+        </action>
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

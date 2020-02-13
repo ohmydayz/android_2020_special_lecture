@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/button"
+        layout="@layout/layout_button"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/textview"
+        layout="@layout/layout_textview"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/edittext"
+        layout="@layout/layout_edittext"
+        android:visibility="gone"/>
+
+
+    <include
+        android:id="@+id/imageview"
+        layout="@layout/layout_imageview"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/switch_layout"
+        layout="@layout/layout_switch"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/radio"
+        layout="@layout/layout_radio_group"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/checkbox"
+        layout="@layout/layout_checkbox"
+        android:visibility="gone"/>
+
+
+
+</FrameLayout>
