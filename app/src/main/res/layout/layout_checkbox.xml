@@ -8,18 +8,21 @@
 
 
     <CheckBox
+        android:id="@+id/cb_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="회원가입 약관에 동의하시겠습니까?" />
 
 
     <CheckBox
+        android:id="@+id/cb_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="개인정보 활용 및 마케팅 이용에 동의하시겠습니까?" />
 
 
     <CheckBox
+        android:id="@+id/cb_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(선택) 문자로 마케팅을 수신하겠습니까?" />
@@ -31,6 +34,5 @@
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="회원가입" />
-
 
 </LinearLayout>

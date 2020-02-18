@@ -15,7 +15,9 @@ import androidx.navigation.Navigation;
 
 public class WidgetFragment extends Fragment implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
-    TextView status;
+    TextView textViewStatus;
+    TextView textViewCounter;
+    int countNumber = 0;
 
     public WidgetFragment() {
     }
@@ -50,9 +52,31 @@ public class WidgetFragment extends Fragment implements View.OnClickListener, Co
             case 5:
                 rootView.findViewById(R.id.radio).setVisibility(View.VISIBLE);
                 break;
+
             case 6:
                 rootView.findViewById(R.id.checkbox).setVisibility(View.VISIBLE);
                 break;
+
+            case 7:
+                rootView.findViewById(R.id.button_textview).setVisibility(View.VISIBLE);
+                break;
+
+            case 8:
+                rootView.findViewById(R.id.layout_linear_1).setVisibility(View.VISIBLE);
+                break;
+            case 9:
+                rootView.findViewById(R.id.layout_linear_2).setVisibility(View.VISIBLE);
+                break;
+            case 10:
+                rootView.findViewById(R.id.layout_frame_1).setVisibility(View.VISIBLE);
+                break;
+            case 11:
+                rootView.findViewById(R.id.layout_frame_2).setVisibility(View.VISIBLE);
+                break;
+            case 12:
+                rootView.findViewById(R.id.layout_relative).setVisibility(View.VISIBLE);
+                break;
+
 
         }
 
@@ -65,11 +89,14 @@ public class WidgetFragment extends Fragment implements View.OnClickListener, Co
 
         //스위치
         ((Switch) rootView.findViewById(R.id.switch_1)).setOnCheckedChangeListener(this);
-        status = rootView.findViewById(R.id.status);
+        textViewStatus = rootView.findViewById(R.id.status);
 
         //체크박스
         rootView.findViewById(R.id.button_sign_up).setOnClickListener(this);
 
+        //버튼과 체크박스
+        rootView.findViewById(R.id.button_plus).setOnClickListener(this);
+        textViewCounter = rootView.findViewById(R.id.textview_counter);
         return rootView;
     }
 
@@ -86,15 +113,19 @@ public class WidgetFragment extends Fragment implements View.OnClickListener, Co
                 NavDirections action = WidgetFragmentDirections.backAction();
                 Navigation.findNavController(view).navigate(action);
                 break;
+            case R.id.button_plus:
+                countNumber++;
+                textViewCounter.setText(countNumber + "");
+                break;
         }
     }
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isOn) {
         if (isOn) {
-            status.setText("ON");
+            textViewStatus.setText("ON");
         } else {
-            status.setText("OFF");
+            textViewStatus.setText("OFF");
         }
     }
 }

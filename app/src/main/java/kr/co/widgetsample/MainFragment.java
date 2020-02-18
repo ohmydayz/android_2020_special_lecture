@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 public class MainFragment extends Fragment {
-    private String[] widgetList = new String[]{"Button", "TextView", "EditText", "ImageView", "Switch", "RadioGroup & RadioButton", "Checkbox", "RecyclerView"};
+    private String[] widgetList = new String[]{"Button", "TextView", "EditText", "ImageView", "Switch", "RadioGroup & RadioButton", "Checkbox", "Button & TextView","LinearLayout 1","LinearLayout 2","FrameLayout 1","FrameLayout 2","RelativeLaayout 1",};
 
     private ArrayAdapter<String> listAdapter;
 

@@ -36,7 +36,6 @@
             android:text="동의 안 함"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-
     </RadioGroup>
 
 
