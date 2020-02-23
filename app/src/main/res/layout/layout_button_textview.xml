@@ -15,7 +15,7 @@
         android:textSize="100dp"
         app:layout_constraintBottom_toTopOf="@+id/button_plus"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="DD" />
+        tools:text="Hello" />
 
     <Button
         android:id="@+id/button_plus"
